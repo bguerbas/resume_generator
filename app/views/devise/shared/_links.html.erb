@@ -1,5 +1,10 @@
-<button><%= t('devise.actions.linkedin') %></button>
-<button><%= t('devise.actions.google') %></button>
+<div class="linkedin">
+  <button><%= t('devise.actions.linkedin') %></button>
+</div>
+
+<div class="google">
+  <button><%= t('devise.actions.google') %></button>
+</div>
 
 <%- if controller_name != 'sessions' %>
   <p>Já tem conta?<%= link_to "Acessar", new_session_path(resource_name) %></p>

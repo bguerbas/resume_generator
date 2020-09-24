@@ -1,0 +1,116 @@
+.devise {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding-left: 24px;
+  //padding-right: 24px;
+
+  .container-image {
+    display: none;
+  }
+
+  .container-form {
+    width: 450px;
+  }
+
+  .container-form h3 {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+    line-height: 29px;
+  }
+
+  .field,
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field label {
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .field input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 0.2px gray solid;
+    margin-bottom: 15px;
+  }
+
+  .actions input {
+    width: 100%;
+    color: white;
+    background-color: var(--pinkRevelo);
+    border-color: transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    cursor: pointer;
+  }
+
+  .actions input:hover {
+    opacity: 0.9;
+  }
+
+  .links {
+    margin-top: 30px;
+    padding-top: 30px;
+    border: 1px transparent solid;
+    border-top-color: lightblue;
+  }
+
+  .linkedin button {
+    background-color: var(--blueRevelo);
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+  }
+
+  .google button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    border: 0.2px var(--blueRevelo) solid;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .devise {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    .container-image {
+      display: block;
+      width: 50%;
+      height: 100vh;
+      background-color: var(--pinkRevelo);
+    }
+
+    .container-form {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    form {
+      width: 450px;
+    }
+  }
+}

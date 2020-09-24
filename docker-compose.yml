@@ -1,20 +1,22 @@
-version: '3'
+version: "3"
 services:
   web:
     build: .
     command: rails s -b 0.0.0.0
-    container_name: generate_pdf
+    container_name: generate_pdf_example
     ports:
       - 3000:3000
     volumes:
       - .:/opt/app
-    environment: 
+    environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=db
     links:
       - db
+
   db:
+    container_name: banco
     image: postgres:12-alpine
     environment:
       - POSTGRES_USER=postgres

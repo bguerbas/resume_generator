@@ -13,8 +13,15 @@
  *= require_tree .
  *= require_self
  */
-.content {
-  background-color: #eee;
+body {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  background-color: white;
   padding: 0px;
   margin: 0px; /* indenta o padding negativo para preservar o grid */
+}
+
+:root {
+  --pinkRevelo: #ef474a;
+  --blueRevelo: #0077b5;
 }
