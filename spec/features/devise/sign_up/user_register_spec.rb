@@ -6,9 +6,9 @@ feature 'User register' do
       fill_in 'user_email', with: 'teste@email.com'
       fill_in 'user_password', with: '123456'
       fill_in 'user_password_confirmation', with: '123456'
-
       click_on 'Avançar'
 
+      expect(page).to have_current_path(root_path)
       expect(page).to have_content('Conta criada com sucesso')
       expect(User.last.email).to eq('teste@email.com')
     end
@@ -21,20 +21,21 @@ feature 'User register' do
         fill_in 'user_email', with: ''
         fill_in 'user_password', with: '123456'
         fill_in 'user_password_confirmation', with: '123456'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Email não pode ficar em branco')
         expect(User.all.length).to eq(0)
       end
       scenario 'must be uniqueness' do
         create(:user, email: 'teste@email.com')
+
         fill_in 'user_email', with: 'teste@email.com'
         fill_in 'user_password', with: '123456'
         fill_in 'user_password_confirmation', with: '123456'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Email já está em uso')
         expect(User.all.length).to eq(1)
       end
@@ -42,9 +43,9 @@ feature 'User register' do
         fill_in 'user_email', with: 'teste_email.com'
         fill_in 'user_password', with: '123456'
         fill_in 'user_password_confirmation', with: '123456'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Email não é válido')
         expect(User.all.length).to eq(0)
       end
@@ -54,9 +55,9 @@ feature 'User register' do
         fill_in 'user_email', with: 'teste@gmail.com'
         fill_in 'user_password', with: ''
         fill_in 'user_password_confirmation', with: ''
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Senha não pode ficar em branco')
         expect(User.all.length).to eq(0)
       end
@@ -64,9 +65,9 @@ feature 'User register' do
         fill_in 'user_email', with: 'teste@email.com'
         fill_in 'user_password', with: '12345678910'
         fill_in 'user_password_confirmation', with: '12345678910'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Senha deve ter menos que 10 caracteres')
         expect(User.all.length).to eq(0)
       end
@@ -74,9 +75,9 @@ feature 'User register' do
         fill_in 'user_email', with: 'teste@email.com'
         fill_in 'user_password', with: '123'
         fill_in 'user_password_confirmation', with: '123'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Senha deve ter mais que 6 caracteres')
         expect(User.all.length).to eq(0)
       end
@@ -84,9 +85,9 @@ feature 'User register' do
         fill_in 'user_email', with: 'teste@email.com'
         fill_in 'user_password', with: '123'
         fill_in 'user_password_confirmation', with: '1234'
-
         click_on 'Avançar'
 
+        expect(page).to have_current_path(users_path)
         expect(page).to have_content('Confirmação da senha não é igual a Senha')
         expect(User.all.length).to eq(0)
       end

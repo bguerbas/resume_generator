@@ -1,7 +1,10 @@
+<button><%= t('devise.actions.linkedin') %></button>
+<button><%= t('devise.actions.google') %></button>
+
 <%- if controller_name != 'sessions' %>
   <p>Já tem conta?<%= link_to "Acessar", new_session_path(resource_name) %></p>
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name) %>
+  <p>É novo por aqui?<%= link_to t('devise.actions.sign_up'), new_registration_path(resource_name) %></p>
 <% end %>
