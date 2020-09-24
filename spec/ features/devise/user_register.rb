@@ -16,36 +16,27 @@ feature 'User register' do
   context 'validations' do
     context 'login' do
       scenario 'cannot be blank' do
-
       end
       scenario 'must be uniqueness' do
-
       end
       scenario 'must be less than 10 caracteres' do
-
       end
     end
     context 'email' do
       scenario 'cannot be blank' do
-
       end
       scenario 'must be uniqueness' do
-
       end
       scenario 'must be valid' do
-
       end
     end
     context 'password' do
       scenario 'cannot be blank' do
-
       end
       scenario 'must be less than 10 caracteres' do
-
       end
       scenario 'must be bigger than 6 caracteres' do
-
       end
     end
   end
-end 
+end

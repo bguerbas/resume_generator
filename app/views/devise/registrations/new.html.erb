@@ -1,29 +1,33 @@
-<h2>Sign up</h2>
+<%= render "devise/shared/devise_image" %>
+
+<h2>Olá candidato, seja bem vindo!</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, 'Digite seu email' %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <%= f.label :password, 'Digite sua senha' %>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, 'Confirme sua senha' %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Avançar" %>
   </div>
 <% end %>
+
+<button>Entrar com Linkedin</button>
+<button>Continuar com Google</button>
+
+<p>Ao continuar, você indica que leu e está de acordo com os termos de uso</p>
 
 <%= render "devise/shared/links" %>

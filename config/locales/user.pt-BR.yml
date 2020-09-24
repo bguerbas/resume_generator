@@ -1,0 +1,9 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+    attributes:
+      user:
+        password: Senha
+        password_confirmation: Confirmação da senha

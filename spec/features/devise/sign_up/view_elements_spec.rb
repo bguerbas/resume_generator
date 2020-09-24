@@ -13,8 +13,6 @@ feature 'Visitor access sign up page and' do
   scenario 'find fields to register' do
     visit new_user_registration_path
 
-    expect(page).to have_content('Digite seu login')
-    expect(page).to have_field('user_login')
     expect(page).to have_content('Digite seu email')
     expect(page).to have_field('user_email')
     expect(page).to have_content('Digite sua senha')
