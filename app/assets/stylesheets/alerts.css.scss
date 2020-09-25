@@ -1,0 +1,13 @@
+.alert {
+  text-align: center;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: var(--alertErrorBackgroundRed);
+  border: 0.1px var(--alertErrorBorderColorRed) solid;
+  color: var(--alertErrorFontColorRed);
+}

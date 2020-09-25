@@ -24,4 +24,21 @@ body {
 :root {
   --pinkRevelo: #ef474a;
   --blueRevelo: #0077b5;
+
+  --alertErrorBackgroundRed: #f8d7da;
+  --alertErrorBorderColorRed: #f5c6cb;
+  --alertErrorFontColorRed: #721c24;
+
+  --alertNoticeBackgroundRed: #d4edda;
+  --alertNoticeBorderColorRed: #c3e6cb;
+  --alertNoticeFontColorRed: ##155724;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pinkRevelo);
+}
+
+li {
+  list-style: none;
 }

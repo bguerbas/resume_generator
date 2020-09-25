@@ -3,15 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //padding-left: 24px;
-  //padding-right: 24px;
 
   .container-image {
     display: none;
   }
 
-  .container-form {
-    width: 450px;
+  form {
+    width: 400px;
   }
 
   .container-form h3 {
@@ -37,6 +35,7 @@
     border-radius: 5px;
     border: 0.2px gray solid;
     margin-bottom: 15px;
+    width: 92%;
   }
 
   .actions input {
@@ -53,7 +52,7 @@
   }
 
   .actions input:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .links {
@@ -63,54 +62,84 @@
     border-top-color: lightblue;
   }
 
-  .linkedin button {
-    background-color: var(--blueRevelo);
-    border-color: transparent;
-    color: white;
-    cursor: pointer;
+  .social_media button {
     width: 100%;
     border-radius: 3px;
     padding-top: 13px;
     padding-bottom: 13px;
+    cursor: pointer;
+  }
+
+  .linkedin button {
+    background-color: var(--blueRevelo);
+    border: 1px transparent solid;
+    color: white;
     margin-bottom: 20px;
+  }
+
+  .linkedin button:hover {
+    background-color: white;
+    border: 1px var(--blueRevelo) solid;
+    color: var(--blueRevelo);
   }
 
   .google button {
     background-color: white;
     color: black;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 3px;
-    border: 0.2px var(--blueRevelo) solid;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    border: 0.2px black solid;
+  }
+
+  .google button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .terms {
+    font-size: 15px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .devise {
-    display: flex;
-    align-items: center;
     flex-direction: row;
-    justify-content: center;
 
-    .container-image {
-      display: block;
-      width: 50%;
-      height: 100vh;
-      background-color: var(--pinkRevelo);
-    }
-
+    .container-image,
     .container-form {
       width: 50%;
       height: 100vh;
+    }
+
+    .container-image {
+      display: flex;
+      align-items: center;
+      background-color: var(--pinkRevelo);
+    }
+
+    .devise_image,
+    .texts {
+      width: 50%;
+    }
+
+    .texts {
+      color: white;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+    }
+
+    .texts .principal {
+      margin-bottom: 10px;
+    }
+
+    .principal h2:first-child {
+      margin-bottom: -20px;
+    }
+
+    .container-form {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    form {
-      width: 450px;
     }
   }
 }
