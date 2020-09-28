@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def sign_in
-    redirect_to resume_index
+  def sign_up
+    redirect_to new_user_registration_path
   end
 end

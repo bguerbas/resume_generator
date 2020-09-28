@@ -1,7 +1,7 @@
 feature 'User register your personal informations' do
   context 'succesfully' do
     let(:user) { create(:user, email: 'user@email.com', password: '123456') }
-    before { sign_in user }
+    before { login_as user, scope: :user }
 
     scenario 'and create your resume' do
       visit resume_index_path

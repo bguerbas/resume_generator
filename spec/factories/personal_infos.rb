@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :personal_info do
     full_name { Faker::Name.name }
-    age { Faker::Number.between(from: 14, to: 120) }
-    sex { %i[ female masculine].sample(random: SecureRandom) }
+    age { rand(14..120) }
+    sex { %w[feminino masculino].sample }
     nationality { Faker::Nation.nationality }
-    civil_status { %i[ married widowed separated divorced single].sample(random: SecureRandom) }
+    civil_status { %w[casado(a) viuvo(a) separado(a) divorciado(a) solteiro(a)].sample }
   end
 end

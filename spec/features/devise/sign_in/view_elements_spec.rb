@@ -8,7 +8,6 @@ feature 'Visitor access sign in page and' do
     expect(page).to have_content('É online.')
     expect(page).to have_content('É Revelo.')
     expect(page).to have_content('Olá candidato, seja bem vindo!')
-    expect(page).to have_content('Ao continuar, você indica que leu e está de acordo com os termos de uso')
   end
   scenario 'find fields to login' do
     visit new_user_session_path
@@ -20,7 +19,7 @@ feature 'Visitor access sign in page and' do
     expect(page).to have_button('Avançar')
     expect(page).to have_button('Entrar com Linkedin')
     expect(page).to have_button('Continuar com Google')
-    expect(page).to have_content('Não tem conta?')
-    expect(page).to have_link('Criar')
+    expect(page).to have_content('É novo por aqui?')
+    expect(page).to have_link('Criar nova conta')
   end
 end

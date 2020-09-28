@@ -4,7 +4,7 @@ pt-BR:
     welcome: "Olá candidato, seja bem vindo!"
     terms: "Ao continuar, você indica que leu e está de acordo com os termos de uso"
     actions:
-      sign_up: "Criar minha conta"
+      sign_up: "Criar nova conta"
       logout: "Sair"
       edit: "Configurar minha conta"
       submit: "Avançar"

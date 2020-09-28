@@ -9,7 +9,7 @@ feature 'User login' do
 
       click_on 'Avançar'
 
-      expect(current_path).to have_content(resume_index_path)
+      expect(current_path).to eq(root_path)
       expect(page).to have_content('Login realizado com sucesso!')
     end
   end
@@ -22,8 +22,8 @@ feature 'User login' do
 
       click_on 'Avançar'
 
-      expect(page).to have_content('Email ou senha inválidos')
-      expect(current_path).to have_content(new_user_session_path)
+      expect(current_path).to eq(new_user_session_path)
+      expect(page).to have_content('Email ou senha inválida')
     end
 
     scenario 'password cannot be blank' do
@@ -32,8 +32,8 @@ feature 'User login' do
 
       click_on 'Avançar'
 
-      expect(page).to have_content('Email ou senha inválidos')
-      expect(current_path).to have_content(new_user_session_path)
+      expect(current_path).to eq(new_user_session_path)
+      expect(page).to have_content('Email ou senha inválida')
     end
 
     scenario 'account not found' do
@@ -42,8 +42,8 @@ feature 'User login' do
 
       click_on 'Avançar'
 
-      expect(page).to have_content('Email ou senha inválidos')
-      expect(current_path).to have_content(new_user_session_path)
+      expect(current_path).to eq(new_user_session_path)
+      expect(page).to have_content('Email ou senha inválida')
     end
 
     scenario 'password invalid' do
@@ -53,8 +53,8 @@ feature 'User login' do
 
       click_on 'Avançar'
 
-      expect(page).to have_content('Email ou senha inválidos')
-      expect(current_path).to have_content(new_user_session_path)
+      expect(current_path).to eq(new_user_session_path)
+      expect(page).to have_content('Email ou senha inválida')
     end
   end
 end

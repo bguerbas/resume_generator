@@ -1,7 +1,7 @@
 feature 'User access list resumes' do
   context 'sucessfully' do
     let(:user) { create(:user, email: 'user@email.com', password: '123456') }
-    before { sign_in user }
+    before(:each) { login_as user, scope: :user }
   
     scenario 'and view your cvs' do
       visit resume_index_path
