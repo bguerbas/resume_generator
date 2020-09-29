@@ -53,7 +53,7 @@
 - [Rails](https://rubyonrails.org/)
 - [Devise](https://github.com/heartcombo/devise)
 
-## Layout:dash:
+## Layout :dash:
 
 Me baseei no site da Revelo para construir o layout da aplicação. 
 
