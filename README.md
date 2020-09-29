@@ -1,6 +1,6 @@
-<h1 align="center">Gerador de currículos</h1> 
-
 <p align="center">
+  <img src="https://user-images.githubusercontent.com/46378210/94552990-307a3a80-022e-11eb-9f1d-fa0061d0031b.png" width="300"/>
+  <br/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=Ruby&message=2.6.3&color=red&style=for-the-badge&logo=ruby"/>
   <img src="http://img.shields.io/static/v1?label=Ruby%20On%20Rails%20&message=6.0.2.2&color=red&style=for-the-badge&logo=ruby"/>
